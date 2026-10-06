@@ -1,0 +1,18 @@
+{
+  "name": "routine-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Routine: check-in, routine e reminder per la giornata scolastica",
+  "scripts": {
+    "android:add": "cap add android && bash scripts/patch-android.sh",
+    "android:sync": "cap sync android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/core": "^7.0.0",
+    "@capacitor/local-notifications": "^7.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.0.0"
+  }
+}

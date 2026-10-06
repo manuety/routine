@@ -1,0 +1,8 @@
+{
+  "appId": "com.routine.app",
+  "appName": "Routine",
+  "webDir": "www",
+  "android": {
+    "backgroundColor": "#ffffff"
+  }
+}
