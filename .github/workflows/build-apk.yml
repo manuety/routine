@@ -8,6 +8,9 @@ on:
 jobs:
   apk:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: routine-android
     steps:
       - uses: actions/checkout@v4
 
@@ -32,7 +35,7 @@ jobs:
         run: npx cap sync android
 
       - name: Build debug APK
-        working-directory: android
+        working-directory: routine-android/android
         run: |
           chmod +x gradlew
           ./gradlew assembleDebug
@@ -40,5 +43,5 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: routine-apk
-          path: android/app/build/outputs/apk/debug/app-debug.apk
+          path: routine-android/android/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
